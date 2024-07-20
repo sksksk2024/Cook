@@ -1,0 +1,26 @@
+@use '../util' as *;
+
+h1,
+h2,
+h3 {
+  font-family: 'Young Serif', sans-serif;
+  margin-top: 0;
+  margin-bottom: rem(10);
+  line-height: 1.1;
+}
+
+a,
+a:visited,
+a:hover {
+  cursor: pointer;
+}
+
+p {
+  font-size: rem(16);
+}
+
+hr {
+  margin-bottom: rem(30);
+  width: rem(702);
+  border: 1px solid var(--stone1);
+}

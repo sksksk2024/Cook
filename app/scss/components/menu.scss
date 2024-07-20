@@ -1,0 +1,111 @@
+@use '../util' as *;
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  color: var(--stone4);
+
+  border-radius: 1rem;
+  background: var(--white);
+  width: rem(790);
+  padding: rem(44);
+  
+  img {
+    align-self: center;
+    width: rem(700);
+    border-radius: 1rem;
+    margin-bottom: rem(40);
+  }
+  
+  // h1 {
+  // }
+  
+  p {
+    margin-bottom: rem(30);
+  }
+  
+  &__card {
+    background: var(--rose1);
+    margin-bottom: rem(30);
+    width: rem(702);
+    padding: rem(30);
+  }
+
+  h2 {
+    color: var(--brown);
+  }
+
+  h3 {
+    color: var(--rose2);
+  }
+
+  ul, ol {
+    list-style-position: outside; /* Position the marker outside */
+    padding-left: rem(20); /* Adjust this value as needed */
+  }
+  
+  li {
+    line-height: 1.3;
+    margin-bottom: rem(10); /* Adjust this value as needed */
+    text-indent: 0; /* No negative indent needed */
+    padding-left: rem(20); /* Adjust padding to control space between marker and text */
+  }
+
+  &__nutrition {
+    display: flex;
+    justify-content: space-between; /* Distribute space between items */
+    margin-left: rem(20);
+    width: 50%;
+    align-items: center; /* Align items vertically centered */
+    padding: rem(5) 0;
+
+    &__color1 {
+      color: var(--stone3);
+    }
+
+    &__color2 {
+      font-weight: 700;
+      color: var(--brown);
+    }
+  }
+
+  &__nutrition span:nth-child(1) {
+  flex-grow: 1; /* Allow the first span to take up available space */ 
+  }
+
+}
+
+
+/* Media query for screens smaller than 798 pixels */
+@media (max-width: 49.875em) {
+  
+  .menu {
+    position: relative;
+    top: -31px;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    padding: rem(30);
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box; /* Ensure padding is included in the width */
+    
+    img {
+      top: rem(20);
+      min-height: auto;
+      max-width: auto;
+    }
+    
+    &__card {
+      margin: auto rem(30) rem(30) rem(10);
+      width: 96%;
+      background-size: auto;
+    }
+
+    &__nutrition {
+      width: 70%;
+    }
+  }
+  
+}

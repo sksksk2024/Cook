@@ -1,0 +1,26 @@
+@use '../util/' as *;
+
+ul.custom-list {
+  list-style-type: disc;
+}
+
+ul.custom-list li::marker {
+  color: var(--brown); /* Change the color of the bullet */
+}
+
+ol.custom-list {
+  counter-reset: item; /* Initialize the counter */
+  list-style: none; /* Remove the default list style */
+}
+
+ol.custom-list li {
+  counter-increment: item; /* Increment the counter */
+  position: relative; /* Relative position for absolute positioning of number */
+}
+
+ol.custom-list li::before {
+  content: counter(item) ". "; /* Display the counter value */
+  color: var(--brown); /* Change the color of the number */
+  position: absolute; /* Position it absolutely */
+  left: -30px; /* Adjust based on your preference */
+}

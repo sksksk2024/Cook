@@ -1,0 +1,41 @@
+@use '../util/' as *;
+
+html {
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Outfit', sans-serif;
+  margin: rem(30) rem(100) rem(30) rem(100);
+  padding: 0;
+  height: 100%;
+  background: var(--stone1);
+  
+  @media (max-width: 49.875em) {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+      margin: 0;
+      padding: auto rem(30) rem(30) rem(30); /* Add padding for content */
+      background: var(--white);
+  }
+
+  footer {
+    font-size: rem(300);
+    margin-top: rem(20);
+    margin-bottom: rem(20);
+  }
+}
